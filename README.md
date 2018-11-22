@@ -7,17 +7,17 @@ The library tries to extract the variables/methods handled in it from its IL cod
 ## Documentation
 
 ```csharp
-// Gets the fields handeld in the method.
-public static HashSet<FieldInfo> GetHandeldFields(this MethodBase self)
+// Gets the fields handled in the method.
+public static HashSet<FieldInfo> GetHandledFields(this MethodBase self)
 ```
 
 ```csharp
-// Gets the fields handeld in the method and the methodes it is calling. 
-// `maxDepth` sets the maximum depth level of the recursion
-public static HashSet<FieldInfo> GetRecursiveHandeldFields(this MethodBase self, uint maxDepth = uint.MaxValue)
+// Gets the fields handled in the method and the methodes it is calling.
+// Sets the maximum depth level of the recursion
+public static HashSet<FieldInfo> GetRecursiveHandledFields(this MethodBase self, uint maxDepth = uint.MaxValue)
 ```
 
 ```csharp
-// Gets the methods handeld in the method.
-public static HashSet<MethodInfo> GetHandeldMethods(this MethodBase self)
+// Gets the methods handled in the method.
+public static HashSet<MethodInfo> GetHandledMethods(this MethodBase self)
 ```
