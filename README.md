@@ -7,17 +7,25 @@ The library tries to extract the variables/methods handled in it from its IL cod
 ## Documentation
 
 ```csharp
-// Gets the fields handled in the method.
+/// <summary>
+/// Gets the fields handled in the method.
+/// </summary>
 public static HashSet<FieldInfo> GetHandledFields(this MethodBase self)
 ```
 
 ```csharp
-// Gets the fields handled in the method and the methodes it is calling.
-// Sets the maximum depth level of the recursion
-public static HashSet<FieldInfo> GetRecursiveHandledFields(this MethodBase self, uint maxDepth = uint.MaxValue)
+/// <summary>
+/// Gets the fields handled in the method and the methods it is calling.
+/// </summary>
+/// <param name="self"></param>
+/// <param name="ignoreTransparent">Ignore methods that are transparent at the current trust level and therefore their handled fields cannot be extracted.</param>
+/// <param name="maxDepth">The maximum depth level of the recursion</param>
+public static HashSet<FieldInfo> GetRecursiveHandledFields(this MethodBase self, bool ignoreTransparent = true, uint maxDepth = uint.MaxValue)
 ```
 
 ```csharp
-// Gets the methods handled in the method.
+/// <summary>
+/// Gets the methods handled in the method.
+/// </summary>
 public static HashSet<MethodInfo> GetHandledMethods(this MethodBase self)
 ```

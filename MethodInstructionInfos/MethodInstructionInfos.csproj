@@ -2,10 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Boslx</Authors>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Mono.Reflection.Core" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

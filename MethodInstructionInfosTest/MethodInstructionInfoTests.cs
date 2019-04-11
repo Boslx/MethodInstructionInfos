@@ -11,7 +11,7 @@ using MethodInstructionInfos;
 namespace MethodInstructionInfosTest
 {
     [TestClass]
-    public class MethodeInstructionInfoTests
+    public class MethodInstructionInfoTests
     {
         [TestMethod]
         public void staticMethode()
